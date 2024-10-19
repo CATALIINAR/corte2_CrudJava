@@ -40,7 +40,7 @@ public class CountriesServices {
         for (int i = 0; i < productos.size(); i++) {
             CountriesEntity country = productos.get(i);
             if (country.getId().equals(id)) {
-                updatedCountry.setId(id); // Mantener el mismo ID
+                updatedCountry.setId(id); 
                 productos.set(i, updatedCountry);
                 return Optional.of(updatedCountry);
             }
