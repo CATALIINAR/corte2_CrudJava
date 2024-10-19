@@ -42,18 +42,21 @@ public class CountriesController {
     //Método para crear un producto
     @PostMapping
     public String createCountry(){
+
         return "POST COUNTRY";
     }
 
     ////Método para actualizar un producto
     @PutMapping("/{id}")
-    public String updateCountry(){
+    public String updateCountry(@PathVariable UUID id){
+        countriesServices.updateCountry(id);
         return "PUT COUNTRY";
     }
 
     //Método para eliminar un país
     @DeleteMapping("/{id}")
-    public String deleteCountry(){
+    public String deleteCountry(@PathVariable UUID id){
+        countriesServices.deleteCountry(id);
         return "DELETE COUNTRY";
     }
 
